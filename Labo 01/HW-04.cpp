@@ -13,7 +13,7 @@ int main(){
 	//Inicialize random numbers 
     srand(time(NULL));
     
-    //
+    //Ciclo For
     for(int i = 1; i <= 15; i++)
     {
         num = 1 + rand() % (16 - 1);
@@ -23,6 +23,7 @@ int main(){
     	}
 	}
     
+    //Mostrando en pantalla
     cout<<endl<<"La suma de los multiplos de 7 es: "<<acum<<endl;
     
     return 0;
