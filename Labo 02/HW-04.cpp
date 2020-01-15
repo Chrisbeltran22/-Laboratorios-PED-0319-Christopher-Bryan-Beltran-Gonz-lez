@@ -24,7 +24,7 @@ int main(){
 	//Printing 
 	cout << "Ingrese los valores de 'a', 'b' y 'c' \n";
 	cout << "Notas:\n- El valor de 'a' o 'c' no pueden ser mayor al valor 'b'";
-	cout << "\n- El valor 'a' no puede ser igual a cero\n- El valor 'a' o 'c' deben ser iguales o uno mayor al otro" << endl;
+	cout << "\n- El valor 'a' no puede ser igual a cero\n- El valor 'a' o 'c' deben ser uno mayor al otro" << endl;
 	cout << "Valor de a:\t"; cin >> value.first;
 	cout << "Valor de b:\t"; cin >> value.second;
 	cout << "Valor de c:\t"; cin >> value.third;
@@ -44,7 +44,7 @@ int root(int a, int b, int c){
 	
 	
 	//Determinating values
-	if (a == 0 || a > b ){
+	if (a == 0 || a > b || a == c ){
 		cout << "El valor de 'a' no puede ser mayor al valor 'b', ni igual a cero o al valor 'c'" << endl;
 		return 0;
 	}
@@ -104,16 +104,16 @@ float lastPart(float squareResult, int a, int b){
 	//Determinating values
 	if (resultAdd != 0 || resultSubtract !=0 ){
 		cout << endl << "La operacion tiene dos raices respuesta" << endl;
-		cout << "El resultado de su suma es: " << resultAdd << endl;
-		cout << "El resultado de su resta es: " << resultSubtract << endl;
+		cout << "El resultado de X1 es: " << resultAdd << endl;
+		cout << "El resultado de X2 es: " << resultSubtract << endl;
 	}
 	if (resultAdd == 0){
 		cout << endl << "La operacion solo tiene una raiz respuesta" << endl;
-		cout << "El resultado de su resta es: " << resultSubtract << endl;
+		cout << "El resultado de X2 es: " << resultSubtract << endl;
 	}
 	if (resultSubtract == 0){
 		cout << endl << "La operacion solo tiene una raiz respuesta" << endl;
-		cout << "El resultado de su suma es: " << resultAdd << endl;
+		cout << "El resultado de X1 es: " << resultAdd << endl;
 	}
 	else if (resultAdd == 0 && resultSubtract == 0){
 		cout << "No posee ninguna raiz" << endl;
