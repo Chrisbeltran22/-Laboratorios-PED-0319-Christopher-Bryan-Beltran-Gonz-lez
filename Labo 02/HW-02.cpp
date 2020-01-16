@@ -1,4 +1,6 @@
+//input and output
 #include <iostream>
+//represent sequences of characters
 #include <string>
 using namespace std;
 

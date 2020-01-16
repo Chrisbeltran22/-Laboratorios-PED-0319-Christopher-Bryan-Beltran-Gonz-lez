@@ -1,4 +1,6 @@
+//input and output
 #include <iostream>
+//common mathematical operations and transformations
 #include <math.h>
 using namespace std;
 
