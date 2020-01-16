@@ -76,7 +76,7 @@ float proccess(int year, float salary){
 	estimation = (months * salary);
 	
 	//Printing
-	cout << "La estimacion del salario devengado en todos los anios que lleva trabajando es de $: " << endl;
+	cout << "La estimacion del salario devengado en todos los anios que lleva trabajando es de $: ";
 	cout << estimation << endl;
 	
 	return 0;
