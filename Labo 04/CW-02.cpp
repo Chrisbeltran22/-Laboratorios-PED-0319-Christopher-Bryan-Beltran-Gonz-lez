@@ -1,50 +1,53 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct Address{
-    int homeNumber;
-    string city, state;
+struct datastudents{
+    string name, report;
+    float grade;
 };
 
-struct personalInfo{
-    string name;
-    int age;
-    Address pAdress;
-};
-
-void printInfo(personalInfo* pI, int size, int pos);
+void fillArray(datastudents* array, int size, int aux);
+void printArray(datastudents* array, int size, int aux);
 
 int main(void){
-    personalInfo* pData;
     int size = 0;
+    cin >> size;
 
-    cout << "Cantidad de datos a ingresar: ", cin >> size;
-    pData = new personalInfo[size];
+    datastudents* students;
+    students = new datastudents[size];
 
-    for (int i = 0; i < size; i++){
-        cout << "Nombre: "; cin >> pData[i].name;
-        cout << "Edad: "; cin >> (pData + i)->age;
-        cout << "No. casa: "; cin >> pData[i].pAdress.homeNumber;
-        cin.ignore();
-        cout << "Ciudad: "; cin >> (pData + i)->pAdress.city;
-        cout << "Estado: "; cin >> (pData + i)->pAdress.state;
-    }
-
-    printInfo(pData, size, 0);
+    fillArray(students, size, 0);
+    fillArray(students,  size, 0);
 
     return 0;
 }
 
-void printInfo(personalInfo* pI, int size, int pos){
-    if(pos == size){
+void fillArray(datastudents* array, int size, int aux){
+    if(size == aux){
         return;
     }
     else{
-        printInfo(pI, size, pos + 1);
-        cout << "Nombre: " << pI[pos].name << endl;
-        cout << "Edad: " << pI[pos].age << endl;
-        cout << "No. casa: " << pI[pos].pAdress.homeNumber << endl;
-        cout << "Ciudad: " << pI[pos].pAdress.city << endl;
-        cout << "Estado: " << pI[pos].pAdress.state << endl;
+        cout << "Nombre: "; getline (cin, array[aux].name);
+        cin.ignore();
+        cout << "Comentarios: "; getline (cin, array[aux].report);
+        cout << "Nota: "; cin >> array[aux].grade;
+        cin.ignore();
+
+        fillArray(array, size, aux + 1);
+    }
+}
+
+void printArray(datastudents* array, int size, int aux){
+    if(size == aux){
+        return;
+    }
+    else{
+        cout << "Nombre: " << array[aux].name;
+        cout << "Comentarios: " << array[aux].report;
+        cout << "Nota: " << array[aux].grade;
+        cin.ignore();
+
+        printArray(array, size, aux + 1);
     }
 }

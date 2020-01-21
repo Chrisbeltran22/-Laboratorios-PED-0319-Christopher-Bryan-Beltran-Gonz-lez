@@ -25,3 +25,27 @@
 * Uso de punteros como referencia
 * Pequeñas complicaciones con el uso de struct en funciones diferentes
 * Almacenar información con structs 
+
+## Laboratorio 03
+
+### Observaciones al instructor 
+* Realiza espacios de preguntas en relación a cada ejercicio que realiza
+* Hay explicaciones a corde a los temas vistos y un pequeño repaso a temas ya vistos, aún mejor
+* El laboratorio es bastante práctico
+
+### Dificultades en ejercicios de tarea
+* Uso de punteros como referencia
+* Pequeñas complicaciones con el uso de struct en funciones diferentes
+* Almacenar información con structs 
+
+## Laboratorio 04
+
+### Observaciones al instructor 
+* Expicacion de ejercicios con forme a como se realiza
+* Se hacen repasos con forme a los temas de clase y laboratorio
+* El laboratorio es muy práctico y mejor
+
+### Dificultades en ejercicios de tarea
+* Uso de punteros como referencia
+* Pequeñas complicaciones con recursiones
+* Almacenar información con punteros 
