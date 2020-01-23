@@ -18,7 +18,7 @@ int main(void){
 node* push(node* pStart, int n){
     node* newNode = new node;
     newNode->n = n;
-
+ 
     newNode->next = pStart;
     pStart = newNode;
 

@@ -3,7 +3,7 @@
 using namespace std;
 
 struct node{
-    string content, address;
+    string content, address; 
     float weigth;
     node* next;
 };
