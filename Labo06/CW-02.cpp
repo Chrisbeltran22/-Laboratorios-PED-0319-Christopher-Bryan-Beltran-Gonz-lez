@@ -15,6 +15,7 @@ string convertString(string product);
 int searchStock(node* list, string product);
 
 int main(void){
+    node* list = NULL;
     int option = 0;
     string product = "";
     float price = 0;
@@ -26,8 +27,8 @@ int main(void){
         switch(option){
             case 1:
                 cout << "Ingrese datos del producto" << endl;
-                cout << "Nombre:\t" << endl; cin >> product;
-                cout << "Precio:\t" << endl; cin >> price;
+                cout << "Nombre:\t"; cin >> product;
+                cout << "Precio:\t"; cin >> price;
                 product = convertString(product);
                 list = addElement(list, product, price);
             break;
