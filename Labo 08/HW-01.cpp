@@ -1,53 +1,43 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 struct node{
-    string name;
     string lastName;
-    int DUI;
-    node *left, *right;
+    node *left, * right;
 };
-typedef struct node T;
 
-void preOrder(node* pTree);
-void postOrder (node* pTree);
+//Prototipos
+void show(node* pTree);
 void inOrder(node* pTree);
-
 void insertInTree(node** pTree, string lastName);
 node* createLeaf(string lastName);
 
-
 int main(void){
-    T unNode;
     node* pTree = NULL;
-    char option;
-    bool verification = true;
-
+    bool process = true;
+    string name, lastName; int election = 0;
+    
     do{
-        cout << "Ingrese datos" << endl;
-        cout << "Nombre:\n";
-        getline(cin , unNode.name);
-        cout << "Apellido:\n";
-        getline(cin , unNode.lastName);
-        cout << "DUI:\n";
-        cin >> unNode.DUI; cin.ignore();
-
-        cout << "Agregar un usuario (s/n)\n";
-        cin >> option;
-        if(option == 'n' || option == 'N'){
-            verification = false;
-        }
-    }while(verification);
-    
-    cout << "Imprimiendo en preOrder" << endl;
-    preOrder(pTree); cout << endl << endl;
-
-    cout << "Imprimiendo en in Order" << endl;
-    inOrder(pTree); cout << endl << endl;
-    
-    cout << "Imprimiendo en postOrder" << endl;
-    postOrder(pTree); cout << endl << endl;
+    	cout << "1- Ingresar una persona\n2- Mostrar palabras ordenadas\n3- salir\n";
+    	cin >> election; cin.ignore();
+    	system("cls");
+    	if(election == 1){
+		    cout << "\nIngrese apellido y nombre: " << endl;
+            getline(cin, lastName);
+    		insertInTree(&pTree, lastName);
+    		cout << endl;
+    		system("pause");
+    		system("cls");
+    	}
+    	else if(election == 2){
+    		show(pTree);
+    	}
+    	else if(election == 3){
+			process = false;
+    	}
+	}while(process);
 
     return 0;
 }
@@ -73,26 +63,6 @@ void insertInTree(node** pTree, string lastName){
     }
 }
 
-void preOrder(node* pTree){
-    if(!pTree)
-        return;
-    else{
-        cout << pTree->lastName << "\t";
-        preOrder(pTree->left);
-        preOrder(pTree->right);
-    }
-}
-
-void postOrder(node* pTree){
-    if(!pTree)
-        return;
-    else{
-        postOrder(pTree->left);
-        postOrder(pTree->right);
-        cout << pTree->lastName << "\t";
-    }
-}
-
 void inOrder(node* pTree){
     if(!pTree)
         return;
@@ -101,4 +71,12 @@ void inOrder(node* pTree){
         cout << pTree->lastName << "\t";
         inOrder(pTree->right);
     }
+}
+
+void show(node* pTree){
+	cout << "\nImprimiendo en in Order las palabras ingresadas\n" << endl;
+    inOrder(pTree);
+	cout << endl;
+    system("pause");
+    system("cls");
 }
