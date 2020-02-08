@@ -41,7 +41,7 @@
 ## Laboratorio 04
 
 ### Observaciones al instructor 
-* Expicacion de ejercicios con forme a como se realiza
+* Explicacion de ejercicios con forme a como se realiza
 * Se hacen repasos con forme a los temas de clase y laboratorio
 * El laboratorio es muy práctico y mejor
 
@@ -49,3 +49,15 @@
 * Uso de punteros como referencia
 * Pequeñas complicaciones con recursiones
 * Almacenar información con punteros 
+
+## Laboratorio 07
+
+### Observaciones al instructor 
+* Explicacion de ejercicios utilizando punteros
+* Explicaciones ejemplificadas con código y a mano
+* Mantiene espacios para consultas o dudas
+
+### Dificultades en ejercicios de tarea
+* Uso de punteros como referencia al llamar datos dentro de ellos
+* Manejo de punteros para determinar posiciones
+* Determinar posiciones por medio de getline
